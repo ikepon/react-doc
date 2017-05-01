@@ -3,12 +3,27 @@ import logo from './logo.svg';
 import './App.css';
 import DangerButton from './Button/DangerButton';
 import Header from './Header';
+import { Grid, Jumbotron, Button } from 'react-bootstrap';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Header />
+        <Jumbotron>
+          <Grid>
+            <h1>Welcome to React</h1>
+            <p>
+              <Button
+                bsStyle="success"
+                bsSize="large"
+                href="http://react-bootstrap.github.io/components.html"
+                target="_blank">
+                View React Bootstrap Docs
+              </Button>
+            </p>
+          </Grid>
+        </Jumbotron>
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
