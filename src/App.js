@@ -26,6 +26,12 @@ class App extends Component {
             </p>
           </Grid>
         </Jumbotron>
+        <div>
+          <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small>
+          <form>
+            <input type="hidden" defaultValue={process.env.REACT_APP_SECRET_CODE} />
+          </form>
+        </div>
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
