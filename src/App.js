@@ -16,6 +16,12 @@ function formatName(user) {
   return user.firstName + ' ' + user.lastName;
 }
 
+function getGreeting(user) {
+  if (user) {
+    return <h1>Hello, {formatName(user)}!</h1>;
+  }
+  return <h1>Hello, Stranger.</h1>;
+}
 
 class App extends Component {
   render() {
@@ -24,7 +30,7 @@ class App extends Component {
         <Header />
         <Jumbotron>
           <Grid>
-            <h1>Welcome to React</h1>
+            {getGreeting(user)}
             <p>
               <Button
                 bsStyle="success"
@@ -38,7 +44,6 @@ class App extends Component {
         </Jumbotron>
         <div>
           <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small>
-          <p>{formatName(user)}</p>
           <form>
             <input type="hidden" defaultValue={process.env.REACT_APP_SECRET_CODE} />
           </form>
