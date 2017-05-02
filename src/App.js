@@ -5,6 +5,8 @@ import logo from './logo.svg';
 import './App.css';
 import DangerButton from './Button/DangerButton';
 import Header from './Header';
+import Clock from './Clock';
+import Toggle from './Button/Toggle';
 import { Grid, Jumbotron, Button } from 'react-bootstrap';
 
 const user = {
@@ -55,7 +57,9 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Toggle />
         <DangerButton color="red" />
+        <Clock />
       </div>
     );
   }
