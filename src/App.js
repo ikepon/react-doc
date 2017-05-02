@@ -7,6 +7,16 @@ import DangerButton from './Button/DangerButton';
 import Header from './Header';
 import { Grid, Jumbotron, Button } from 'react-bootstrap';
 
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+};
+
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+
 class App extends Component {
   render() {
     return (
@@ -28,6 +38,7 @@ class App extends Component {
         </Jumbotron>
         <div>
           <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small>
+          <p>{formatName(user)}</p>
           <form>
             <input type="hidden" defaultValue={process.env.REACT_APP_SECRET_CODE} />
           </form>
