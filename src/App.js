@@ -6,33 +6,23 @@ import './App.css';
 import DangerButton from './Button/DangerButton';
 import Header from './Header';
 import Clock from './Clock';
+import Greeting from './Greeting';
 import Toggle from './Button/Toggle';
 import { Grid, Jumbotron, Button } from 'react-bootstrap';
 
-const user = {
-  firstName: 'Harper',
-  lastName: 'Perez'
-};
-
-function formatName(user) {
-  return user.firstName + ' ' + user.lastName;
-}
-
-function getGreeting(user) {
-  if (user) {
-    return <h1>Hello, {formatName(user)}!</h1>;
-  }
-  return <h1>Hello, Stranger.</h1>;
-}
-
 class App extends Component {
   render() {
+    const user = {
+      firstName: 'Harper',
+      lastName: 'Perez'
+    };
+
     return (
       <div className="App">
         <Header />
         <Jumbotron>
           <Grid>
-            {getGreeting(user)}
+            {this.getGreeting(user)}
             <p>
               <Button
                 bsStyle="success"
@@ -57,11 +47,23 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Greeting isLoggedIn={true} />
         <Toggle />
         <DangerButton color="red" />
         <Clock />
       </div>
     );
+  }
+
+  getGreeting(user) {
+    if (user) {
+      return <h1>Hello, {this.formatName(user)}!</h1>;
+    }
+    return <h1>Hello, Stranger.</h1>;
+  }
+
+  formatName(user) {
+    return user.firstName + ' ' + user.lastName;
   }
 }
 
