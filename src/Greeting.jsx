@@ -3,6 +3,14 @@
 import React from 'react';
 
 class Greeting extends React.Component {
+  userGreeting() {
+    return <h1>Welcome back!</h1>;
+  }
+
+  guestGreeting() {
+    return <h1>Please sign up.</h1>;
+  }
+
   render() {
     const isLoggedIn = this.props.isLoggedIn;
 
@@ -10,14 +18,6 @@ class Greeting extends React.Component {
       return this.userGreeting();
     }
     return this.guestGreeting();
-  }
-
-  userGreeting() {
-    return <h1>Welcome back!</h1>;
-  }
-
-  guestGreeting() {
-    return <h1>Please sign up.</h1>;
   }
 }
 

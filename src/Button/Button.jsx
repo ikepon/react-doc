@@ -1,9 +1,9 @@
 // @flow
 
-import React, { Component } from 'react';
+import React from 'react';
 import './Button.css';
 
-class Button extends Component {
+class Button extends React.Component {
   render() {
     return (
       <button type="button" name="aaa" value="aaa" className="Button">
