@@ -15,6 +15,7 @@ import Toggle from './Button/Toggle';
 import Blog from './Blog/Blog';
 import NameForm from './Form/NameForm';
 import FlavorForm from './Form/FlavorForm';
+import ReservationForm from './Form/ReservationForm';
 
 class App extends React.Component {
   render() {
@@ -45,6 +46,7 @@ class App extends React.Component {
         <Blog posts={posts}/>
         <NameForm />
         <FlavorForm />
+        <ReservationForm />
       </div>
     );
   }
