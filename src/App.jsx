@@ -12,7 +12,8 @@ import Page from './Page';
 import NumberList from './NumberList';
 import LoginControl from './LoginControl';
 import Toggle from './Button/Toggle';
-import Blog from './Blog/Blog'
+import Blog from './Blog/Blog';
+import NameForm from './NameForm';
 
 class App extends React.Component {
   render() {
@@ -41,6 +42,7 @@ class App extends React.Component {
         <Page />
         <NumberList numbers={numbers} />
         <Blog posts={posts}/>
+        <NameForm />
       </div>
     );
   }
