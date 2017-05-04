@@ -16,6 +16,7 @@ import Blog from './Blog/Blog';
 import NameForm from './Form/NameForm';
 import FlavorForm from './Form/FlavorForm';
 import ReservationForm from './Form/ReservationForm';
+import Calculator from './Calculator';
 
 class App extends React.Component {
   render() {
@@ -47,6 +48,7 @@ class App extends React.Component {
         <NameForm />
         <FlavorForm />
         <ReservationForm />
+        <Calculator />
       </div>
     );
   }
