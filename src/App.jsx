@@ -17,6 +17,7 @@ import NameForm from './Form/NameForm';
 import FlavorForm from './Form/FlavorForm';
 import ReservationForm from './Form/ReservationForm';
 import Calculator from './Calculator';
+import FilterableProductTable from './FilterableProductTable';
 
 class App extends React.Component {
   render() {
@@ -30,6 +31,15 @@ class App extends React.Component {
     const posts = [
       {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
       {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+    ];
+
+    var PRODUCTS = [
+      {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+      {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+      {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+      {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+      {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+      {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
     ];
 
     return (
@@ -49,6 +59,7 @@ class App extends React.Component {
         <FlavorForm />
         <ReservationForm />
         <Calculator />
+        <FilterableProductTable products={PRODUCTS} />
       </div>
     );
   }
